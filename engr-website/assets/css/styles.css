@@ -11,8 +11,9 @@
  * The height may need to be changed if the height of you
  * navigation changes.
 */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
-body { padding-top: 70px; font-family: Consolas; font-size: 14px;}
+body { padding-top: 70px; font-family: Inconsolata; font-size: 14px;}
 
 a { color: #000000;}
 
