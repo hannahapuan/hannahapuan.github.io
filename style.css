@@ -407,22 +407,6 @@ footer span {
   display:block;
   filter:invert(1);
 }
-.icon.i1 {
-  background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/363972/nc-test-outline-64px_cloud.svg);
-  
-}
-.icon.i2 {
-  background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/363972/nc-test-outline-64px_headphones.svg);
-}
-.icon.i3 {
-  background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/363972/nc-test-outline-64px_heart.svg);
-}
-.icon.i4 {
-  background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/363972/nc-test-outline-64px_like.svg);
-}
-.icon.i5 {
-  background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/363972/nc-test-outline-64px_sun-cloud.svg);
-}
 
 .settings {
   position:fixed;
