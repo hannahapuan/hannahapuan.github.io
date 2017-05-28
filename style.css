@@ -148,29 +148,7 @@ article .people .round-tile .roundal {
   transition: box-shadow 0.25s;
   
 }
-article .people .round-tile .roundal.twitter {
-  background-color: #1da1f2;
-  background-image: url("http://www.macdrifter.com/theme/images/twitter-snow.svg");
-  background-size: 50% auto;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-article .people .round-tile .roundal.codepen {
-  background-color: #000000;
-  background-image: url("https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png");
-  background-size: 110% auto;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-article .people .round-tile .roundal.instagram {
-  background-color: transparent;
-  background-image: url("http://sevenfiguresocial.com/wp-content/uploads/2016/08/instagram_gradient_wallpaper_by_jasonzigrino-da28exh-550x400.png");
-  background-size: auto 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
-}
+
 
 article .people .round-tile h4 {
   font-size: 1.1em;
