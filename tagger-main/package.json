@@ -1,0 +1,25 @@
+{
+  "name": "tagger-sendgrid",
+  "version": "0.1.0",
+  "description": "SendGrid application to classify emails",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "SendGrid",
+    "Tagger",
+    "email"
+  ],
+  "author": "Hannah Apuan",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  },
+  "dependencies": {
+    "electron-builder": "^19.15.5",
+    "electron-require": "^0.3.0",
+    "faker": "^4.1.0"
+  }
+}
