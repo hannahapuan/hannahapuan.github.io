@@ -1,6 +1,13 @@
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-/*# sourceMappingURL=style.css.map */
+body
+{
+    background-color: #000000;
+    font-family: sans-serif;
+    color: #333333;
+    font-size: 12px;
+}
+h1
+{
+    font-family: sans-serif;
+    color: #333333;
+    font-size: 50px;
+}
