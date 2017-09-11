@@ -13,20 +13,20 @@
 				   e.a+=e.s;
 				      $.save();
 				         $.beginPath();
-					    $.translate(w/2, h/2);
+					    $.translate(w/2, h/2); 
 					       $.rotate(e.a);
 					          $.arc(e.r,e.r,1,0,Math.PI*2);
 						     $.arc(Math.cos(e.a)*e.r + w/2, Math.sin(e.a)*e.r + h/2,1,0,Math.PI*2);
 						        $.closePath();
 						           $.fillStyle = "white";
 						              $.fill();
-						                $.restore()
-						                 })
-						                     requestAnimationFrame(loop)
-						                     }
+						                 $.restore();
+						                   });
+						                     requestAnimationFrame(loop);
+						                      }
 						                       loop();
 						                        window.addEventListener("resize", (e)=>{
 						                          w=c.width=window.innerWidth;
 						                            h=c.height=window.innerHeight;
 						                             });
-						                             })()
+						                             })();
