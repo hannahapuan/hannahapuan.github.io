@@ -9,13 +9,14 @@
 
   <div class="blog-body">
     <main class="blog-content">
+      <br><br><br>
       <h1>std.out</h1>
     <h2>Add a Spellcheck Feature to Your NodeJS Project</h2>
     <h4>7:50 AM October 24th, 2017</h4>
-    This month is <a href="https://hacktoberfest.digitalocean.com/">Hacktober</a>, and it's a great opportunity to add something to an open source project! My first Hacktober pull request <a href="https://github.com/sendgrid/docs/pull/3146">(link)</a> was to <a href="https://github.com/sendgrid/docs">SendGrid's docs repo</a>, adding a spellchecking feature. This feature is so important for large-scale projects where many people contribute to markdown and html pages, and it's hard to keep track of all of the changes! Even on a personal scale, this feature is great for projects like this blog.
+    This month is <a class="no-underline" href="https://hacktoberfest.digitalocean.com/">Hacktober</a>, and it's a great opportunity to add something to an open source project! My first Hacktober pull request <a class="no-underline" href="https://github.com/sendgrid/docs/pull/3146">(link)</a> was to <a class="no-underline" href="https://github.com/sendgrid/docs">SendGrid's docs repo</a>, adding a spellchecking feature. This feature is so important for large-scale projects where many people contribute to markdown and html pages, and it's hard to keep track of all of the changes! Even on a personal scale, this feature is great for projects like this blog.
     <br>
     <h3>Setup</h3>
-    If you are editing an existing NodeJS project, skip to the next paragraph. Even if you're not familiar with NodeJS or NPM, this shouldn't be too hard. NodeJS is amazing out-of-the-box. I'm not going to explain how to setup NodeJS and NPM, but you can learn how to do so <a href="https://www.npmjs.com/get-npm">(here)</a>.<br><br>
+    If you are editing an existing NodeJS project, skip to the next paragraph. Even if you're not familiar with NodeJS or NPM, this shouldn't be too hard. NodeJS is amazing out-of-the-box. I'm not going to explain how to setup NodeJS and NPM, but you can learn how to do so <a class="no-underline" href="https://www.npmjs.com/get-npm">(here)</a>.<br><br>
     If you're starting from a brand new directory, initalize the folder as a typical NodeJS project via the command line.
 
     <div class=fakeMenu>
@@ -43,7 +44,7 @@ npm start
 If it starts up properly, you should be good to move on to the next section!
 
  <h3>Spellchecker</h3>
- For the spellchecking functionality, I am using the npm package called <a href="https://www.npmjs.com/package/markdown-spellcheck">markdown-spellcheck</a>. This package is great because it can handle lots of errors, spellcheck from many files/directories, and it doesn't actually change any code, it just prints out its analysis to stdout. The end functionality will allow the command <xmp>npm run spellcheck</xmp> to spellcheck all of the html and markdown files and <xmp>npm run spellcheck-file [file]</xmp> to spellcheck [file] (given it is html or markdown).<br><br>
+ For the spellchecking functionality, I am using the npm package called <a class="no-underline"  href="https://www.npmjs.com/package/markdown-spellcheck">markdown-spellcheck</a>. This package is great because it can handle lots of errors, spellcheck from many files/directories, and it doesn't actually change any code, it just prints out its analysis to stdout. The end functionality will allow the command <xmp>npm run spellcheck</xmp> to spellcheck all of the html and markdown files and <xmp>npm run spellcheck-file [file]</xmp> to spellcheck [file] (given it is html or markdown).<br><br>
  First, we need to initialize the package by adding it as a dependency to <xmp>package.json</xmp>. This can all be done on the command line by the <i>magic</i> of npm.
 
  <div class=fakeMenu>
@@ -100,7 +101,7 @@ Notice how the <xmp>mdspell</xmp> command accepts directory formats with wildcar
 <li><xmp>-r</xmp> = generates a report on stdout</li>
 <li><xmp>|| :</xmp> = forces the script to return true (as long as there is an error, mdspell returns exit 1 and npm does not like that)</li>
 <br>
-If you want more information on the <xmp>mdspell</xmp> command or <xmp>markdown-spellcheck</xmp> npm package, go to the <a href="https://www.npmjs.com/package/markdown-spellcheck">markdown-spellcheck</a> package documentation. <br><br>
+If you want more information on the <xmp>mdspell</xmp> command or <xmp>markdown-spellcheck</xmp> npm package, go to the <a class="no-underline" href="https://www.npmjs.com/package/markdown-spellcheck">markdown-spellcheck</a> package documentation. <br><br>
 <h3>Testing Install</h3>
 Via command line:
 <div class=fakeMenu>
@@ -150,8 +151,8 @@ nodeJS
 <xmp>tl;dr:</xmp> NodeJS is awesome!
 <br><br>
 Finding the right package for your needs is about the hardest part once you get the hang of it. This added a useful feature in a modular way without way too much work! Reinventing the wheel for this problem could get HUGE and COMPLEX.
-<br><br>Some potential cons of this package that I found is that it becomes more complicated with CI tools like Travis or Jenkins because of all the log files generated. This can be fixed by also excluding those files from being checked, otherwise you risk <xmp>mdspell</xmp> freezing and timing out your build. Also the <a href="http://wordlist.aspell.net/dicts/">dictionary</a> is subpar, especially with tech jargon and markdown files with code included.. however the package documentation includes a custom dictionary option. Just make sure to watch out for those things!<br><br>
-Although it is late in the month, I would also highly recommend getting involved in <a href="https://hacktoberfest.digitalocean.com/">Hacktober</a>! Contributing to open source projects is always good! And you can get free swag from <a href="https://hacktoberfest.digitalocean.com/#details">DigitalOcean</a> from only four pull requests.
+<br><br>Some potential cons of this package that I found is that it becomes more complicated with CI tools like Travis or Jenkins because of all the log files generated. This can be fixed by also excluding those files from being checked, otherwise you risk <xmp>mdspell</xmp> freezing and timing out your build. Also the <a class="no-underline" href="http://wordlist.aspell.net/dicts/">dictionary</a> is subpar, especially with tech jargon and markdown files with code included.. however the package documentation includes a custom dictionary option. Just make sure to watch out for those things!<br><br>
+Although it is late in the month, I would also highly recommend getting involved in <a class="no-underline" href="https://hacktoberfest.digitalocean.com/">Hacktober</a>! Contributing to open source projects is always good! And you can get free swag from <a class="no-underline" href="https://hacktoberfest.digitalocean.com/#details">DigitalOcean</a> from only four pull requests.
     </main>
     <nav class="blog-nav">
 

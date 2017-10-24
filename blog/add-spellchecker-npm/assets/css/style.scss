@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700);
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
+
 h1 {
  font-family: "Roboto";
  line-height: 1em;
@@ -11,10 +12,10 @@ h2 {
  line-height: 1em;
 }
 h3 {
+  font-style: bold;
  font-family: "Open Sans";
  font-size: 20px;
  line-height: .5em;
- font-weight: 400;
 }
 h4{
   color: #9b9b9b;
@@ -28,13 +29,23 @@ footer{
 }
 
 a:link.no-underline{
-  color: #000000;
+  color: #FFA500;
   text-decoration: none;
 }
-a:link.no-underline{
+a:hover.no-underline{
+  color: #fff;
+  background: #FFA500;
   text-decoration: none;
 }
-
+a:visited.no-underline{
+  color: #9b9b9b;
+  text-decoration: none;
+}
+a:visited:hover.no-underline{
+  color: #000;
+  background: #9b9b9b;
+  text-decoration: none;
+}
 .header-cont {
   font-family: "Open Sans";
     width:100%;
@@ -255,12 +266,12 @@ a:link.no-underline{
 
 @media (min-width: 768px) {
   .blog-body {
-      width: 50%;
+      width: 75%;
     flex-direction: row;
     flex: 1;
   }
   .blog-content {
-      width: 85%;
+      width: 75%;
     flex: 1;
   }
   .blog-nav, .blog-ads {
