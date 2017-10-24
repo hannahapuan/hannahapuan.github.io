@@ -1,5 +1,6 @@
 /*PEN STYLES*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700);
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 h1 {
  font-family: "Roboto";
@@ -513,14 +514,17 @@ body {
   }
 }
 
-
 xmp {
+  font-family: "Roboto Mono";
+  font-size: 12px;
+  display: inline;
+  margin: 0 auto;
+}
+xmp .padding{
   margin: -1em auto;
   line-height: 1.5em;
-  color: #FFF;
 // font-family:"Courier New";
 }
-
 // terminal
 .fakeButtons {
   height: 10px;
@@ -559,7 +563,8 @@ xmp {
 }
 
 .fakeScreen {
-  background-color: #151515;
+    color: #EEEEDE;
+  background-color: #383838;
   box-sizing: border-box;
   width: 100%;
   margin: 0 auto;
