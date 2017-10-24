@@ -12,7 +12,7 @@
       <h1>std.out</h1>
     <h2>Add a Spellcheck Feature to Your NodeJS Project</h2>
     <h4>7:50 AM October 24th, 2017</h4>
-    This month is Hacktober, and it's a great opportunity to add something to an open source project! My first Hacktober pull request <a href="https://github.com/sendgrid/docs/pull/3146">(link)</a> was to <a href="https://github.com/sendgrid/docs">SendGrid's docs repo</a>, adding a spellchecking feature. This feature is so important for large-scale projects where many people contribute to markdown and html pages, and it's hard to keep track of all of the changes! Even on a personal scale, this feature is great for projects like this blog.
+    This month is <a href="https://hacktoberfest.digitalocean.com/">Hacktober</a>, and it's a great opportunity to add something to an open source project! My first Hacktober pull request <a href="https://github.com/sendgrid/docs/pull/3146">(link)</a> was to <a href="https://github.com/sendgrid/docs">SendGrid's docs repo</a>, adding a spellchecking feature. This feature is so important for large-scale projects where many people contribute to markdown and html pages, and it's hard to keep track of all of the changes! Even on a personal scale, this feature is great for projects like this blog.
     <br>
     <h3>Setup</h3>
     If you are editing an existing NodeJS project, skip to the next paragraph. Even if you're not familiar with NodeJS or NPM, this shouldn't be too hard. NodeJS is amazing out-of-the-box. I'm not going to explain how to setup NodeJS and NPM, but you can learn how to do so <a href="https://www.npmjs.com/get-npm">(here)</a>.<br><br>
@@ -69,6 +69,7 @@ mdspell '**/*.html' -a --en-us -r
 >> 16 spelling errors found in 1 file
 </xmp>
 </div><br><br>
+Note that <xmp>mdspell</xmp> won't return any mistakes if you don't have any files or mistakes in the your files!<br><br>
 Next, we need to edit the <xmp>package.json</xmp> directly to add the scripts <xmp>spellcheck</xmp> and <xmp>spellcheck-file</xmp>.
 <div class=fakeMenu>
 <div class="fakeButtons fakeClose"></div>
@@ -82,7 +83,8 @@ Next, we need to edit the <xmp>package.json</xmp> directly to add the scripts <x
   ...
   "scripts": {
     ....
-    "spellcheck": "echo \"Spellchecking...\" && mdspell '**/*.html' '**/*.md' '!**/node_modules/**/*' -a --en-us -r || :",
+    "spellcheck": "echo \"Spellchecking...\" && mdspell '**/*.html' '**/*.md'
+      '!**/node_modules/**/*' -a --en-us -r || :",
     "spellcheck-file": "mdspell -a --en-us -r"
   },
   ....
@@ -94,12 +96,13 @@ Notice how the <xmp>mdspell</xmp> command accepts directory formats with wildcar
 <br><br>
 <xmp>mdspell</xmp> command flag overview:
 <li><xmp>-a</xmp> = ignores acronyms</li>
-<li><xmp>--en-us</xmp> = changes dictionary to American English (default is British English)</li>
+<li><xmp>--en-us</xmp>  = changes dictionary to American English (default is British English)</li>
 <li><xmp>-r</xmp> = generates a report on stdout</li>
 <li><xmp>|| :</xmp> = forces the script to return true (as long as there is an error, mdspell returns exit 1 and npm does not like that)</li>
 <br>
 If you want more information on the <xmp>mdspell</xmp> command or <xmp>markdown-spellcheck</xmp> npm package, go to the <a href="https://www.npmjs.com/package/markdown-spellcheck">markdown-spellcheck</a> package documentation. <br><br>
 <h3>Testing Install</h3>
+Via command line:
 <div class=fakeMenu>
 <div class="fakeButtons fakeClose"></div>
 <div class="fakeButtons fakeMinimize"></div>
@@ -147,7 +150,8 @@ nodeJS
 <xmp>tl;dr:</xmp> NodeJS is awesome!
 <br><br>
 Finding the right package for your needs is about the hardest part once you get the hang of it. This added a useful feature in a modular way without way too much work! Reinventing the wheel for this problem could get HUGE and COMPLEX.
-<br><br>Some potential cons of this package that I found is that it becomes more complicated with CI tools like Travis or Jenkins because of all the log files generated. This can be fixed by also excluding those files from being checked, otherwise you risk <xmp>mdspell</xmp> freezing and timing out your build. Also the <a href="http://wordlist.aspell.net/dicts/">dictionary</a> is subpar, especially with tech jargon and markdown files with code included.. however the package documentation includes a custom dictionary option. Just make sure to watch out for those things!
+<br><br>Some potential cons of this package that I found is that it becomes more complicated with CI tools like Travis or Jenkins because of all the log files generated. This can be fixed by also excluding those files from being checked, otherwise you risk <xmp>mdspell</xmp> freezing and timing out your build. Also the <a href="http://wordlist.aspell.net/dicts/">dictionary</a> is subpar, especially with tech jargon and markdown files with code included.. however the package documentation includes a custom dictionary option. Just make sure to watch out for those things!<br><br>
+Although it is late in the month, I would also highly recommend getting involved in <a href="https://hacktoberfest.digitalocean.com/">Hacktober</a>! Contributing to open source projects is always good! And you can get free swag from <a href="https://hacktoberfest.digitalocean.com/#details">DigitalOcean</a> from only four pull requests.
     </main>
     <nav class="blog-nav">
 
