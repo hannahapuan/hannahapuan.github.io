@@ -8,6 +8,7 @@
 
   burgerMenu.addEventListener('click', function toggleClasses() {
     [body, burgerContain, burgerNav].forEach(function (el) {
+      el.classList.toggle('n');
       el.classList.toggle('open');
     });
   }, false);

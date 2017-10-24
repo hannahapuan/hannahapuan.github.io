@@ -1,10 +1,5 @@
 /*PEN STYLES*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700);
-body {
-  font-family: "Roboto";
-  background: #f1f1f1;
-  margin: 2rem; }
-
 h1 {
   font-family: "Roboto";
   line-height: 1em; }
@@ -21,6 +16,10 @@ footer {
 .header {
   line-height: 1em;
   font-family: "Open Sans";
+  height: 50px;
+  background: #FFF;
+  border: 1px solid #CCC;
+  width: 960px;
   margin: 0px auto; }
 
 .blog-card {
@@ -52,11 +51,11 @@ footer {
   position: relative; }
 
 .blog-card .photo.photo1 {
-  background: url("http://i62.tinypic.com/34oq4o0.jpg") center no-repeat;
+  background: url("http://is1.mzstatic.com/image/thumb/Purple71/v4/93/95/20/93952071-63d9-ed18-a9f3-da753674f091/source/1200x630bb.jpg") center no-repeat;
   background-size: cover; }
 
 .blog-card .photo.photo2 {
-  background: url("http://i60.tinypic.com/xeiv79.jpg") center no-repeat;
+  background: url("https://i.pinimg.com/564x/86/75/98/8675987eb6696493475fb985e64d9ee9--pusheen-love-pusheen-cat.jpg") center no-repeat;
   background-size: cover; }
 
 .blog-card .details {
@@ -227,6 +226,28 @@ footer {
     margin: 10px auto;
     /* 12em is the width of the columns */
     flex: 0 0 12em; } }
+body {
+  font-family: "Roboto";
+  background: #f1f1f1;
+  margin: 2rem; }
+  body.n:after {
+    background: rgba(255, 255, 255, 0.5);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: auto;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.4s ease;
+    width: 100%; }
+  body.open {
+    overflow: hidden; }
+  body.open:after {
+    opacity: 1;
+    visibility: visible; }
+
 @keyframes slideInLeft {
   0% {
     transform: translate3d(-250px, 0, 0);
@@ -241,24 +262,6 @@ footer {
     visibility: hidden; } }
 * {
   box-sizing: border-box; }
-
-body:after {
-  background: rgba(255, 255, 255, 0.5);
-  content: '';
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  overflow: auto;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  transition: all 0.4s ease;
-  width: 100%; }
-body.open {
-  overflow: hidden; }
-body.open:after {
-  opacity: 1;
-  visibility: visible; }
 
 .b-nav {
   position: absolute;
