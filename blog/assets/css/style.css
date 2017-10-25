@@ -25,11 +25,10 @@ footer {
   margin: 50px auto; }
 
 a:link.no-underline {
-  color: #000000;
   text-decoration: none; }
 
-a:link.no-underline {
-  text-decoration: none; }
+a:link.title {
+  color: #000000; }
 
 .header-cont {
   font-family: "Open Sans";
@@ -75,11 +74,11 @@ a:link.no-underline {
   position: relative; }
 
 .blog-card .photo.photo1 {
-  background: url("http://is1.mzstatic.com/image/thumb/Purple71/v4/93/95/20/93952071-63d9-ed18-a9f3-da753674f091/source/1200x630bb.jpg") center no-repeat;
+  background: url("http://www.naturalnews.com/gallery/640/Money/Economy-Stock-Market-Money.jpg") center no-repeat;
   background-size: cover; }
 
 .blog-card .photo.photo2 {
-  background: url("https://i.pinimg.com/564x/86/75/98/8675987eb6696493475fb985e64d9ee9--pusheen-love-pusheen-cat.jpg") center no-repeat;
+  background: url("http://forcecounsel.com/wp-content/uploads/2016/02/code-944504_960_720.jpg") center no-repeat;
   background-size: cover; }
 
 .blog-card .details {
@@ -166,7 +165,7 @@ a:link.no-underline {
   left: 0; }
 
 .blog-card .description a {
-  color: #FFA500;
+  color: inherit;
   margin-bottom: 10px;
   float: right; }
 
