@@ -1,0 +1,136 @@
+.<!doctype html>
+<html lang="en">
+
+<head>
+		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="//uiux.s3.amazonaws.com/style-guide/css/style-guide.css?versionId=B4s3cprsruOw89X7jnG15MYQSP36E6ch"> -->
+    <title>Hannah Apuan</title>
+</head>
+
+<body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+	</noscript>
+	frequency:<input type="range" min="0" max="1000" value="1" class="slider" id="frequency">
+	<br>
+	a:<input type="range" min="100" max="1000" value="300" class="slider" id="a">
+	<br>
+	lineWidth:<input type="range" min="1" max="20" value="1" class="slider" id="width">
+	<br>
+	multB:<input type="range" min="1" max="20" value="1" class="slider" id="multB">
+	<br>
+	multA:<input type="range" min="1" max="50" value="1" class="slider" id="multA">
+	<br>
+	b:<input type="range" min="1" max="100" value="1" class="slider" id="b">
+<br>
+dist:<input type="range" min="-100" max="1000" value="100" class="slider" id="dist">
+<br>
+	<canvas id="canvas" width="1000" height="1000"
+	style="background-color:#fff">
+	</canvas>
+    <script type="text/javascript">
+$(function () {
+	var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+var a = 300;
+var b = 1;
+var x= 0;
+var y = 0;
+var frequency = 3;
+var width = 1;
+var multB = .1;
+var multA = .1;
+var dist = 100;
+var color = 0;
+var $a = document.getElementById('a');
+var $frequency = document.getElementById('frequency');
+var $width = document.getElementById('width');
+var $multB = document.getElementById('multB');
+var $multA = document.getElementById('multA');
+var $b = document.getElementById('b');
+var $dist = document.getElementById('dist');
+
+    // listen for keyup events on width & height input-text elements
+    // Get the current values from input-text & set the width/height vars
+    // call draw to redraw the rect with the current width/height values
+	$frequency.addEventListener("change", function() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		frequency = this.value;
+		console.log("frequency: " +frequency/100);
+}, false);
+    $a.addEventListener("change", function() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		a = this.value;
+		console.log("a: "+a);
+}, false);
+$width.addEventListener("change", function() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		width = this.value;
+		console.log("width: "+width);
+}, false);
+$multB.addEventListener("change", function() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		multB = this.value;
+		console.log("multB: "+multB/10);
+}, false);
+$multA.addEventListener("change", function() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		multA = this.value;
+		console.log("multA: "+multA/10);
+}, false);
+$b.addEventListener("change", function() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		b = this.value;
+		console.log("b: "+b);
+}, false);
+$dist.addEventListener("change", function() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		dist = this.value;
+		console.log("dist: "+dist);
+}, false);
+
+
+setInterval(draw, .001);
+//
+
+function draw() {
+	drawCircle(ctx, radius,x,color, frequency);
+//	drawCircle1(ctx, radius,x,color, frequency);
+	x+=1000;
+	//console.log(color);
+	if (color > 255){
+		//console.log(color);
+	    color = 0;
+   }else{
+	   color++;
+   }
+}
+
+function drawCircle(ctx, radius,x,color, frequency) {
+//  var grad;
+  ctx.beginPath();
+  ctx.lineWidth=width;
+   var red  = Math.round(Math.sin(frequency/100*x/10) * 127 +128);
+   var green = Math.round(Math.sin(frequency/100*x/10+2) * 127 +128);
+   var blue  = Math.round(Math.sin(frequency/100*x/10+4) * 127 +128);
+// var red = 30;
+// var green = 30;
+// var blue = 30;
+
+ctx.strokeStyle =  'rgba('+red+','+green+','+blue+', .1)';
+//console.log(ctx.strokeStyle);
+ctx.lineTo(Math.round(Math.sin(multA/10*x-b) * a +300-dist),Math.round(Math.cos(multA/10*x-b) * a +300-dist));
+//ctx.moveTo(300,150);
+ctx.lineTo(Math.round(Math.sin(multB/10*x+b) * a +300-dist),Math.round(Math.cos(multB/10*x+b) * a +300-dist));
+ctx.stroke();
+}
+
+
+
+});
+    </script>
+</body>
+
+</html>
