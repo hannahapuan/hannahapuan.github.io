@@ -1,6 +1,28 @@
-.tile{
-    width: 105vw;
-    text-align: left;
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+img {
+    position: absolute;
+    display: inline;
+}
+
+.list{
+    margin-left: 20px;
+    font: 700 26px/1.2 'playfair display';
+    line-height: 50px;
+}
+
+.tile {
+    width: 130vw;
 }
 
 .tile-text {
@@ -8,140 +30,134 @@
     padding-left: 100px;
 }
 
-.stackable{
-    height:79vh;
+.stackable {
+    height: 79vh;
 }
 
-.primary{
+.primary {
     height: 103vh;
 }
 
-.tile-wrapper-primary{
+.tile-wrapper-primary {
     left: 100px;
     position: absolute;
     padding: 150px auto;
-    margin:100px auto;
-
+    margin: 100px auto;
 }
 
-.tile-wrapper-stackable{
+.tile-wrapper-stackable {
     top: 100px;
     left: 100px;
     position: absolute;
-    color:white;
+    color: white;
     padding: 10px auto;
-
 }
-.white{
+
+.tile-wrapper-textbox {
+    top: 100px;
+    left: 40%;
+    position: absolute;
+    color: white;
+}
+
+.white {
     background: white;
     color: black;
 }
+
 .blue {
     background: #187ad6;
-    color:white;
+    color: white;
 }
+
 .mint {
     background: #19d691;
-    color:white;
-}
-.orange{
- color:white;
- background: #ff6e21; /* Old browsers */
-
+    color: white;
 }
 
-.red{
+.orange {
+    color: white;
+    background: #ff6e21;
+    /* Old browsers */
+}
+
+.red {
     color: white;
     background: #d61515;
 }
-body {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-}
-.header-wrapper{
+
+.header-wrapper {
     height: 110px;
 }
+
 .emphasis {
-   font: italic 700 84px/1.2 'playfair display';
+    font: italic 700 84px/1.2 'playfair display';
     font-size: 100px;
     display: inline;
 }
 
 .header {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 72px;
 }
 
-img{
-    position: absolute;
-    display: inline;
-}
 .a {
     left: 170px;
     top: 300px;
 }
+
 .b {
     left: 320px;
     top: 300px;
 }
 
-.c{
-    left:470px;
-    top:300px;
+.c {
+    left: 470px;
+    top: 300px;
 }
 
-.d{
+.d {
     left: 620px;
-    top:300px;
+    top: 300px;
 }
 
-.tooltip {
+.font-orange {
+    color: #ff6e21;
+}
+
+.font-mint {
+    color: #19d691;
+}
+
+.font-blue {
+    color: #187ad6;
+}
+
+.textbox-tile {
+    line-height: 50px;
+    margin-top: 280px;
+    z-index: 15;
+    position: relative;
+    height: 200px;
+    width: 50vw;
+    padding: 40px;
+    margin-left:-10%;
+    
+}
+.bottom{
+    text-align: right;
+   margin-right: 300px;
+}
+ul {
+    float: left;
+    width: 24em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
   
-  font-size: 20px;
-position: relative;
-display: inline-block;
-border-bottom: 5px dotted white;
-}
-.font-orange{
-  color: #ff6e21;
-}
-.font-mint{
-  color: #19d691;
-}
-.font-blue{
-  color: #187ad6;
-}
-.tooltip .tooltiptext {
-visibility: hidden;
-width: 50%;
-background-color: white;
-height: auto;
-text-align: center;
-border-radius: 6px;
-position: absolute;
-z-index: 1;
-top: 150%;
-left: 80%;
-margin-left: -60px;
-padding-top: 50px;
-padding-bottom: 50px;
-padding-right: 20px;
-padding-left: 20px;
-}
-
-.tooltip .tooltiptext::after {
-
-content: "";
-position: absolute;
-bottom: 100%;
-left: 50%;
-margin-left: -5px;
-border-width: 20px;
-border-style: solid;
-border-color: transparent transparent white transparent;
-}
-
-.tooltip:hover .tooltiptext {
-visibility: visible;
-}
+  li {
+    float: left;
+    width: 6em;
+    margin: -10px;
+  } 
