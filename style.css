@@ -141,12 +141,13 @@ img {
     height: 200px;
     width: 50vw;
     padding: 40px;
-    margin-left:-10%;
+    margin-left:-300px;
     
 }
 .bottom{
-    text-align: right;
-   margin-right: 300px;
+    display:inline;
+    text-align:right;
+    padding-right: 100px;
 }
 ul {
     float: left;
@@ -161,3 +162,7 @@ ul {
     width: 6em;
     margin: -10px;
   } 
+
+  .text{
+      margin-left: 100px;
+  }
