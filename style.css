@@ -147,10 +147,10 @@ img {
 }
 
 @media only screen and (max-width: 1000px) {
-    .small {
+    .s {
         display: inline;
     }
-    .big{
+    .b{
         display: none;
     }
 }
