@@ -5,6 +5,7 @@ body {
 }
 
 body {
+    margin:0;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
@@ -102,6 +103,7 @@ img {
 }
 
 .header {
+    word-wrap: break-word;
     font-family: 'Roboto', sans-serif;
     font-size: 72px;
 }
