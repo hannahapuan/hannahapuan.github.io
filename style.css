@@ -112,10 +112,10 @@ img {
     font-size: 72px;
 }
 
-.small {
+.s {
     display: none;
 }
-.big{
+.b{
     display: inline;
 }
 .a {
