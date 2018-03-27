@@ -147,12 +147,6 @@ img {
 }
 
 @media only screen and (max-width: 1000px) {
-    .text {
-        display: none;
-    }
-    .textbox-tile {
-        display: none;
-    }
     .small {
         display: inline;
     }
