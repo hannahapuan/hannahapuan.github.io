@@ -112,10 +112,10 @@ img {
     font-size: 72px;
 }
 
-.s {
+.sm {
     display: none;
 }
-.b{
+.bi{
     display: inline;
 }
 .a {
@@ -147,10 +147,10 @@ img {
 }
 
 @media only screen and (max-width: 1000px) {
-    .s {
+    .sm {
         display: inline;
     }
-    .b{
+    .bi{
         display: none;
     }
 }
