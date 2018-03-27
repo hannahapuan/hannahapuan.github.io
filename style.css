@@ -1,5 +1,6 @@
 html,
 body {
+    word-wrap: break-word;
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -40,9 +41,11 @@ img {
 }
 
 .tile-wrapper-primary {
-    left: 100px;
     position: absolute;
-    padding: 150px auto;
+    padding-top: 25px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 100px;
     margin: 100px auto;
 }
 
@@ -93,6 +96,7 @@ img {
 }
 
 .header-wrapper {
+    word-wrap: break-word;
     height: 110px;
 }
 
