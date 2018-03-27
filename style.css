@@ -112,6 +112,12 @@ img {
     font-size: 72px;
 }
 
+.small {
+    display: none;
+}
+.big{
+    display: inline;
+}
 .a {
     left: 170px;
     top: 300px;
@@ -140,11 +146,17 @@ img {
     color: #19d691;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .text {
         display: none;
     }
     .textbox-tile {
+        display: none;
+    }
+    .small {
+        display: inline;
+    }
+    .big{
         display: none;
     }
 }
