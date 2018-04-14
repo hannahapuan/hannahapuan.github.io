@@ -215,6 +215,9 @@ li {
 }
 
 .twitter{
+position: absolute;
+top: 40%;
 margin: 50px;
+
 }
 
