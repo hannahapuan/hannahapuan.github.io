@@ -12,7 +12,7 @@ body {
     font-size: 24px;
 }
 
-img {
+.icon img{
     position: absolute;
     display: inline;
 }
@@ -214,10 +214,25 @@ li {
     width: 600px;
 }
 
-.twitter{
-position: absolute;
-top: 40%;
-margin: 50px;
+.widgets{
+width: 100%;
+margin: 170px;
+padding-top: 250px;
 
 }
 
+.twitter{
+float:left;
+padding-right: 50px;
+}
+.github{
+float:left;
+font-size: 16px;
+padding-right: 50px;
+padding-top:40px;
+}
+
+.insta{
+	padding-top: 40px;
+
+}
