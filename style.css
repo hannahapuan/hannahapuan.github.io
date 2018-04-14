@@ -215,8 +215,7 @@ li {
 }
 
 .twitter{
-position: absolute;
-left: 50px;
-bottom: 100px;
+    padding-top: 450px;
+padding-left:50px;
 }
 
