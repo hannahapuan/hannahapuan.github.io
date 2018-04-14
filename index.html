@@ -11,13 +11,24 @@
 
   gtag('config', 'UA-108530341-2');
 </script>
-<script type="text/javascript" src="https://cdnjs.com/libraries/fullPage.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" rel="stylesheet">
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+      });
+    });
+  </script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900|Roboto" rel="stylesheet">
 </head>
 
 <body>
+  <div id="fullpage">
+    <div class="section">
   <div class="tile orange primary">
 
     <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-offset="200" data-aos-delay="200" data-aos-easing="ease-out-cubic"
@@ -33,12 +44,12 @@
 
     </div>
 
-    <a class="arrow-wrap" href="#tile-2">
-<span class="arrow-orange"></span></a>
+    </div>
   </div>
 
+    <div class="section">
   <div class="tile mint primary" id="tile-2">
-    <div data-aos="fade-up">
+    
       <div class="tile-wrapper-primary">
         <div class="header">
           I'm a
@@ -60,8 +71,6 @@
       <br>
       <br>
       <div class="text">
-        <div data-aos="fade-up" data-aos-offset="200" data-aos-anchor-placement="center-bottom" data-aos-delay="200" data-aos-easing="ease-out-cubic"
-          data-aos-duration="600">
           <br><br>
           I work everyday with technologies like
           <br>
@@ -86,15 +95,11 @@
           <br>
           <div class="bottom">and more</div>
         </div>
-                  <a class="arrow-wrap" href="#tile-3">
-<span class="arrow-mint"></span></a>
-      </div>
     </div>
 
   </div>
+      <div class="section">
   <div class="tile blue primary" id="tile-3">
-    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-offset="200" data-aos-delay="200" data-aos-easing="ease-out-cubic"
-      data-aos-duration="600">
       <div class="tile-wrapper-primary">
         <div class="header">
           I work at
@@ -104,23 +109,15 @@
         <br>
         <br>
         <div class="subtext">
-          <div data-aos="fade-up" data-aos-offset="200" data-aos-anchor-placement="center-bottom" data-aos-delay="200" data-aos-easing="ease-out-cubic"
-            data-aos-duration="600">
             Delivering your transactional and marketing emails through the world's largest cloud-based email delivery platform. I am
             currently product co-owner of the Signup flow, written in ReactJS and Go.
           </div>
-        </div>
       </div>
-                            <a class="arrow-wrap" href="#tile-4">
-<span class="arrow-blue"></span></a>
     </div>
 
   </div>
-
-  </div>
+      <div class="section">
   <div class="tile red primary" id="tile-4">
-    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-offset="200" data-aos-delay="200" data-aos-easing="ease-in-out-cubic"
-      data-aos-duration="600">
       <div class="tile-wrapper-primary">
         <div class="header">
           I recently graduated from
@@ -130,21 +127,15 @@
         <br>
         <br>
         <div class="subtext">
-          <div data-aos="fade-up" data-aos-offset="200" data-aos-anchor-placement="center-bottom" data-aos-delay="200" data-aos-easing="ease-out-cubic"
-            data-aos-duration="600">
             I graduated in three years (2014-2017) from DU with a BS in Computer Science and minors in Mathematics and German Language
             & Literature.
-          </div>
         </div>
       </div>
-                                      <a class="arrow-wrap" href="#tile-5">
-<span class="arrow-red"></span></a>
     </div>
 
   </div>
+      <div class="section">
   <div class="tile purple primary" id="tile-5">
-    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-offset="200" data-aos-delay="200" data-aos-easing="ease-in-out-cubic"
-      data-aos-duration="600">
       <div class="tile-wrapper-primary">
         <div class="header">
           I actively support
@@ -154,8 +145,6 @@
         <br>
         <br>
         <div class="subtext">
-          <div data-aos="fade-up" data-aos-offset="200" data-aos-anchor-placement="center-bottom" data-aos-delay="200" data-aos-easing="ease-out-cubic"
-            data-aos-duration="600">
             <ul class="small list">
               <li>Women in Tech Panelist - HackCU Feb 2018</li>
               <li>Keynote Speaker - ChickTech Denver Jan 2018</li>
@@ -163,65 +152,40 @@
               <li>Anita Borg Scholar - Grace Hopper Conference Oct 2018</li>
               <li>President & Cofounder - DU Women in Computing 2014-2017</li>
             </ul>
-          </div>
           <br>
           <br>
           <br>
           <br>
           <br>
           <br>
-          <div data-aos="fade-up" data-aos-offset="200" data-aos-anchor-placement="center-bottom" data-aos-delay="200" data-aos-easing="ease-out-cubic"
-            data-aos-duration="600">
             <div class="bottom"> Please reach out to me if you have an opportunity, and I would love to help! </div>
-          </div>
         </div>
-                                              <a class="arrow-wrap" href="#tile-6">
-<span class="arrow-purple"></span></a>
-      </div>
+                                           </div>
     </div>
   </div>
+  <div class="section">
   <div class="tile white primary" id="tile-6">
-    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-offset="200" data-aos-delay="200" data-aos-easing="ease-out-cubic"
-      data-aos-duration="600">
       <div class="tile-wrapper-primary header">
         Get to know
         <div class="emphasis">me</div>
       </div>
-      <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-offset="200" data-aos-delay="500" data-aos-easing="ease-out-cubic"
-        data-aos-duration="600">
         <a href="https://www.linkedin.com/in/hannahapuan/">
           <img class="a" src="assets/linkedin.svg" alt="linkedin" width="100px" height="100px">
         </a>
-      </div>
-      <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-offset="200" data-aos-delay="700" data-aos-easing="ease-out-cubic"
-        data-aos-duration="600">
         <a href="https://github.com/hannahapuan">
           <img class="b" src="assets/github.svg" alt="github" width="100px" height="100px">
         </a>
-      </div>
-      <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-offset="200" data-aos-delay="900" data-aos-easing="ease-out-cubic"
-        data-aos-duration="600">
         <a href="https://twitter.com/hannah_apuan">
           <img class="c" src="assets/twitter.svg" alt="linkedin" width="100px" height="100px">
         </a>
-      </div>
-      <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-offset="200" data-aos-delay="1100" data-aos-easing="ease-out-cubic"
-        data-aos-duration="600">
         <a href="https://hannahapuan.github.io/resume.pdf">
           <img class="d" src="assets/resume.svg" alt="linkedin" width="100px" height="100px">
         </a>
-      </div>
-    </div>
   </div>
+</div>
 </body>
 <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script>
   AOS.init({});
 </script>
-<script>
-$(document).ready(function() {
-  $('#fullpage').fullpage();
-});
-</script>
-
 </html>
