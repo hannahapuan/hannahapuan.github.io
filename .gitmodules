@@ -1,0 +1,6 @@
+[submodule "new-site/js/new-site/js/jquery-mousewheel"]
+	path = new-site/js/new-site/js/jquery-mousewheel
+	url = git@github.com:jquery/jquery-mousewheel.git
+[submodule "new-site/js/jquery-mousewheel"]
+	path = new-site/js/jquery-mousewheel
+	url = git@github.com:jquery/jquery-mousewheel.git

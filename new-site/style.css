@@ -1,0 +1,39 @@
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.white {
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 42%, rgba(231, 231, 231, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 42%, rgba(231, 231, 231, 1) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 42%, rgba(231, 231, 231, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#e7e7e7", GradientType=1);
+}
+
+.peach {
+    background: rgb(251, 181, 63);
+    background: -moz-radial-gradient(circle, rgba(251, 181, 63, 1) 0%, rgba(252, 154, 70, 1) 32%, rgba(252, 111, 70, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(251, 181, 63, 1) 0%, rgba(252, 154, 70, 1) 32%, rgba(252, 111, 70, 1) 100%);
+    background: radial-gradient(circle, rgba(251, 181, 63, 1) 0%, rgba(252, 154, 70, 1) 32%, rgba(252, 111, 70, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fbb53f", endColorstr="#fc6f46", GradientType=1);
+}
+
+.scrolling-wrapper-flexbox>.card {
+    flex: 0 0 auto;
+    width: 400px;
+    height: 250px;
+}
+
+.scrolling-wrapper {
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-wrapper>::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: #c6beb6;
+}
