@@ -5,14 +5,13 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
-.panel-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: flex;
-}
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
 
-@media only screen and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+
     .panel-container>.main-panel {
         width: 0% !important;
     }
@@ -27,6 +26,89 @@ body {
         letter-spacing: 10px;
         font-size: 72px !important;
     }
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .panel-container>.main-panel {
+        width: 0% !important;
+    }
+
+    .panel-container>.side-panel {
+        text-align: center !important;
+        width: 770px !important;
+        background-size: 100% auto !important;
+    }
+
+    span {
+        letter-spacing: 10px;
+        font-size: 72px !important;
+    }
+
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .panel-container>.main-panel {
+        width: 0% !important;
+    }
+
+    .panel-container>.side-panel {
+        text-align: center !important;
+        width: 770px !important;
+        background-size: 100% auto !important;
+    }
+
+    span {
+        letter-spacing: 10px;
+        font-size: 72px !important;
+    }
+
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .panel-container>.main-panel {
+        width: 0% !important;
+    }
+
+    .panel-container>.side-panel {
+        text-align: center !important;
+        width: 770px !important;
+        background-size: 100% auto !important;
+    }
+
+    span {
+        letter-spacing: 10px;
+        font-size: 72px !important;
+    }
+
+}
+
+/* Desktop/Laptop */
+
+
+.panel-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
 }
 
 .panel-container>.main-panel {
