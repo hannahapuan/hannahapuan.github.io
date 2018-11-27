@@ -103,6 +103,46 @@ body {
 
 /* Desktop/Laptop */
 
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    .panel-container>.main-panel {
+        padding: 50px;
+        width: 75%;
+    }
+
+    .main-panel>.panel-content {
+        width: 100%;
+    }
+
+    .panel-container>.side-panel {
+        width: 650px;
+    }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .panel-container>.main-panel {
+        padding: 50px;
+        width: 75%;
+    }
+
+    .main-panel>.panel-content {
+        width: 100%;
+    }
+
+    .panel-container>.side-panel {
+        width: 650px;
+    }
+}
+
 
 .panel-container {
     position: absolute;
@@ -112,24 +152,17 @@ body {
 }
 
 .panel-container>.main-panel {
-    padding: 50px;
     color: #646c7a;
-    width: 75%;
     background: #fff;
     display: flex;
     flex-direction: column;
     overflow: auto;
-
-}
-
-.main-panel>.panel-content {
-    width: 100%;
 }
 
 
 .panel-container>.side-panel {
     color: #fff;
-    width: 650px;
+
     padding-top: 220px;
     text-align: center;
     background: #7666DC;
