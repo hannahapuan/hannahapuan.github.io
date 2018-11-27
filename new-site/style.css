@@ -14,7 +14,13 @@ body {
 
 @media screen and (max-width: 768px) {
     .panel-container>.main-panel {
-        font-size: 24px !important;
+        width: 0% !important;
+    }
+
+    .panel-container>.side-panel {
+        text-align: center !important;
+        width: 770px !important;
+        background-size: 100% auto !important;
     }
 }
 
