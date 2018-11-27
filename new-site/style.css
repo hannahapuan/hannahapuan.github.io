@@ -22,6 +22,11 @@ body {
         width: 770px !important;
         background-size: 100% auto !important;
     }
+
+    span {
+        letter-spacing: 10px;
+        font-size: 72px !important;
+    }
 }
 
 .panel-container>.main-panel {
