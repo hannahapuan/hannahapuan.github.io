@@ -85,10 +85,12 @@ a:visited {
     color: #7666DC;
 }
 
+
 a:active,
 a:hover {
-    color: #E58A8D;
+    color: #B359CA;
 }
+
 
 .line {
     margin-top: 30px;
