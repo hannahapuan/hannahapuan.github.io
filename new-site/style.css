@@ -43,7 +43,7 @@ body {
     background-image: url('bkg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: auto 100%;
 }
 
 h1 {
