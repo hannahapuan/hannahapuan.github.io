@@ -12,6 +12,17 @@ body {
     display: flex;
 }
 
+@media screen and (max-width: 700px) {
+    .panel-container>.main-panel {
+        width: 0% !important;
+    }
+
+    .panel-container>.side-panel {
+        width: 100%;
+        background-size: 150% !important;
+    }
+}
+
 .panel-container>.main-panel {
     padding: 50px;
     color: #646c7a;
@@ -33,7 +44,7 @@ body {
     width: 650px;
     padding-top: 220px;
     text-align: center;
-    background: rgb(255, 236, 210);
+    background: #7666DC;
     background-image: url('bkg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
