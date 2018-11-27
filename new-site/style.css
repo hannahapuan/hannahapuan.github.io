@@ -12,7 +12,7 @@ body {
     display: flex;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .panel-container>.main-panel {
         width: 0% !important;
     }
