@@ -18,8 +18,8 @@ body {
 
     .panel-container>.side-panel {
         text-align: center !important;
-        width: 770px !important;
-        background-size: 100% auto !important;
+        width: 100% !important;
+        background-size: auto !important;
     }
 
     span {
@@ -42,7 +42,7 @@ body {
 
     .panel-container>.side-panel {
         text-align: center !important;
-        width: 770px !important;
+        width: 100% !important;
         background-size: 100% auto !important;
     }
 
@@ -66,7 +66,7 @@ body {
 
     .panel-container>.side-panel {
         text-align: center !important;
-        width: 770px !important;
+        width: 100% !important;
         background-size: 100% auto !important;
     }
 
@@ -90,7 +90,7 @@ body {
 
     .panel-container>.side-panel {
         text-align: center !important;
-        width: 770px !important;
+        width: 100% !important;
         background-size: 100% auto !important;
     }
 
