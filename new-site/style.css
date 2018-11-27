@@ -5,6 +5,15 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
+a {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+dt {
+    line-height: 30px;
+}
+
 /* 
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
@@ -193,6 +202,10 @@ body {
     overflow: auto;
 }
 
+.main-panel>.panel-content {
+    letter-spacing: 1px;
+}
+
 
 .panel-container>.side-panel {
     color: #fff;
@@ -205,6 +218,7 @@ body {
     background-attachment: fixed;
     background-size: auto 100%;
 }
+
 
 h1 {
     letter-spacing: 10px;
@@ -223,8 +237,16 @@ h1 {
     color: #D87180;
 }
 
+
 .fourth {
-    color: #E99E88;
+    color: #E69B72;
+}
+
+
+.panel-content>a:hover,
+a:active {
+    color: #fff;
+    background-color: #5041D8;
 }
 
 
@@ -241,16 +263,16 @@ span {
     letter-spacing: 10px;
 }
 
-a {
+span>a {
     color: #fff;
 }
 
-a:visited {
+span>a:visited {
     color: #fff;
 }
 
 
-a:active,
+span>a:active,
 a:hover {
     color: #B359CA;
 }
