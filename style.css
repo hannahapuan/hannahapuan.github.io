@@ -1,238 +1,285 @@
-html,
 body {
-    word-wrap: break-word;
-    max-width: 100%;
-    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 100;
+    font-family: 'Work Sans', sans-serif;
 }
 
-body {
-    margin:0;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+a {
+    font-weight: 400;
+    text-decoration: none;
 }
 
-.icon img{
-    position: absolute;
-    display: inline;
+dt {
+    line-height: 30px;
 }
 
-.list {
-    margin-left: 20px;
-    font: 700 26px/1.2 'playfair display';
-    line-height: 50px;
-}
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
 
-.tile {
-    width: 130vw;
-}
+@media (min-width: 768px) and (max-width: 1024px) {
 
-.tile-text {
-    top: -250px;
-    padding-left: 100px;
-}
-
-.stackable {
-    height: 79vh;
-}
-
-.primary {
-    height: 103vh;
-}
-
-.tile-wrapper-primary {
-    position: absolute;
-    padding-top: 25px;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 100px;
-    margin: 100px auto;
-}
-
-.tile-wrapper-stackable {
-    top: 100px;
-    left: 100px;
-    position: absolute;
-    color: white;
-    padding: 10px auto;
-}
-
-.tile-wrapper-textbox {
-    top: 100px;
-    left: 40%;
-    position: absolute;
-    color: white;
-}
-
-.white {
-    background: white;
-    color: black;
-}
-
-.blue {
-    background: #187ad6;
-    color: white;
-}
-
-.mint {
-    background: #19d691;
-    color: white;
-}
-
-.orange {
-    color: white;
-    background: #ff6e21;
-    /* Old browsers */
-}
-
-.red {
-    color: white;
-    background: #d61515;
-}
-
-.purple {
-    color: white;
-    background: #8219d3;
-}
-
-.header-wrapper {
-    word-wrap: break-word;
-    height: 110px;
-}
-
-.emphasis {
-    font: italic 700 84px/1.2 'playfair display';
-    font-size: 100px;
-    display: inline;
-}
-
-.header {
-    word-wrap: break-word;
-    font-family: 'Roboto', sans-serif;
-    font-size: 72px;
-}
-
-.sm {
-    display: none;
-}
-.bi{
-    display: inline;
-}
-.a {
-    left: 170px;
-    top: 300px;
-}
-
-.b {
-    left: 320px;
-    top: 300px;
-}
-
-.c {
-    left: 470px;
-    top: 300px;
-}
-
-.d {
-    left: 620px;
-    top: 300px;
-}
-
-.font-orange {
-    color: #ff6e21;
-}
-
-.font-mint {
-    color: #19d691;
-}
-
-@media only screen and (max-width: 1000px) {
-    .sm {
-        display: inline;
+    .panel-container>.main-panel {
+        width: 0% !important;
     }
-    .bi{
-        display: none;
+
+    .panel-container>.side-panel {
+        text-align: center !important;
+        width: 100% !important;
+        background-size: auto !important;
+    }
+
+    span {
+        letter-spacing: 10px;
+        font-size: 130px !important;
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .panel-container>.main-panel {
+        width: 0% !important;
+    }
+
+    .panel-container>.side-panel {
+        text-align: center !important;
+        width: 100% !important;
+        background-size: 100% auto !important;
+    }
+
+    span {
+        letter-spacing: 10px;
+        font-size: 130px !important;
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .panel-container>.main-panel {
+        width: 0% !important;
+    }
+
+    .panel-container>.side-panel {
+        text-align: center !important;
+        width: 100% !important;
+        background-size: 100% auto !important;
+    }
+
+    span {
+        letter-spacing: 10px;
+        font-size: 130px !important;
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .panel-container>.main-panel {
+        width: 0% !important;
+    }
+
+    .panel-container>.side-panel {
+        text-align: center !important;
+        width: 100% !important;
+        background-size: 100% auto !important;
+    }
+
+    span {
+        letter-spacing: 10px;
+        font-size: 130px !important;
+    }
+
+    h1 {
+        font-size: 130px;
+    }
+
+}
+
+/* Desktop/Laptop */
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    .panel-container>.main-panel {
+        padding: 50px;
+        width: 75%;
+    }
+
+    .main-panel>.panel-content {
+        width: 100%;
+    }
+
+    .panel-container>.side-panel {
+        width: 650px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    span {
+        letter-spacing: 10px;
+        font-size: 48px !important;
     }
 }
 
-.font-blue {
-    color: #187ad6;
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .panel-container>.main-panel {
+        padding: 50px;
+        width: 75%;
+    }
+
+    .main-panel>.panel-content {
+        width: 100%;
+    }
+
+    .panel-container>.side-panel {
+        width: 650px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    span {
+        letter-spacing: 10px;
+        font-size: 48px !important;
+    }
 }
 
-.textbox-tile {
-    line-height: 50px;
-    margin-top: 280px;
-    z-index: 15;
-    position: relative;
-    height: 200px;
-    width: 50vw;
-    padding: 40px;
-    margin-left: -300px;
+
+.panel-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
 }
 
-.bottom {
-    display: inline;
-    text-align: right;
-    padding-right: 100px;
+.panel-container>.main-panel {
+    color: #646c7a;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 }
 
-ul {
-    float: left;
-    width: 24em;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.main-panel>.panel-content {
+    letter-spacing: 1px;
 }
 
-li {
-    float: left;
-    width: 6em;
-    margin: -10px;
+
+.panel-container>.side-panel {
+    color: #fff;
+
+    padding-top: 220px;
+    text-align: center;
+    background: #7666DC;
+    background-image: url('bkg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 100%;
 }
 
-.small ul {
-    float: left;
-    width: 36em;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+
+h1 {
+    letter-spacing: 10px;
+    font-weight: 100;
 }
 
-.small li {
-    line-height: 70px;
-    float: left;
-    width: 36em;
-    margin: -10px;
+.first {
+    color: #6E60DB;
 }
 
-.text {
-    margin-left: 100px;
+.second {
+    color: #B359CA;
 }
 
-.subtext {
-    line-height: 50px;
-    width: 600px;
+.third {
+    color: #D87180;
 }
 
-.widgets{
-width: 100%;
-margin: 100px;
-padding-top: 280px;
 
+.fourth {
+    color: #E69B72;
 }
 
-.twitter{
-float:left;
-padding-right: 50px;
-}
-.github{
-float:left;
-font-size: 16px;
-padding-right: 50px;
-padding-top:40px;
+
+.panel-content>a:hover,
+a:active {
+    color: #fff;
+    background-color: #5041D8;
 }
 
-.insta{
-	padding-top: 40px;
 
+h2 {
+
+    font-weight: 400;
+}
+
+.peach {
+    color: rgba(252, 182, 159, 1);
+}
+
+span {
+    letter-spacing: 10px;
+}
+
+span>a {
+    color: #fff;
+}
+
+span>a:visited {
+    color: #fff;
+}
+
+
+span>a:active,
+a:hover {
+    color: #B359CA;
+}
+
+
+.line {
+    margin-top: 30px;
+    width: 60%;
+    border-radius: 50px;
 }
