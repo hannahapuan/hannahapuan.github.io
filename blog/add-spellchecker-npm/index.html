@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <!-- https://codepen.io/ChynoDeluxe/pen/bdXeqQ?q=blog&limit=all&type=type-pens -->
+
 <head>
   <link rel="stylesheet" href="assets/css/style.css">
-<script src="assets/js/index.js"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108530341-1"></script>
+  <script src="assets/js/index.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108530341-1"></script>
 </head>
+
 <body class="blog">
 
   <div class="blog-body">
@@ -14,183 +16,225 @@
       <h1>std.out - a blog</h1>
       <br>
       <p class="subtitle"><b>Tech Tutorial</b></p>
-    <h2>Add a Spellcheck Feature to Your NodeJS Project</h2>
-    <h4>7:50 AM October 24th, 2017</h4>
-    This month is <a class="no-underline" href="https://hacktoberfest.digitalocean.com/">Hacktober</a>, and it's a great opportunity to add something to an open source project! My first Hacktober pull request <a class="no-underline" href="https://github.com/sendgrid/docs/pull/3146">(link)</a> was to <a class="no-underline" href="https://github.com/sendgrid/docs">SendGrid's docs repo</a>, adding a spellchecking feature. This feature is so important for large-scale projects where many people contribute to markdown and html pages, and it's hard to keep track of all of the changes! Even on a personal scale, this feature is great for projects like this blog.
-    <br>
-    <h3>Setup</h3>
-    If you are editing an existing NodeJS project, skip to the next paragraph. Even if you're not familiar with NodeJS or NPM, this shouldn't be too hard. NodeJS is amazing out-of-the-box. I'm not going to explain how to setup NodeJS and NPM, but you can learn how to do so <a class="no-underline" href="https://www.npmjs.com/get-npm">(here)</a>.<br><br>
-    If you're starting from a brand new directory, initalize the folder as a typical NodeJS project via the command line.
+      <h2>Add a Spellcheck Feature to Your NodeJS Project</h2>
+      This month is <a class="no-underline" href="https://hacktoberfest.digitalocean.com/">Hacktober</a>, and it's a
+      great opportunity to add something to an open source project! My first Hacktober pull request <a
+        class="no-underline" href="https://github.com/sendgrid/docs/pull/3146">(link)</a> was to <a class="no-underline"
+        href="https://github.com/sendgrid/docs">SendGrid's docs repo</a>, adding a spellchecking feature. This feature
+      is so important for large-scale projects where many people contribute to markdown and html pages, and it's hard to
+      keep track of all of the changes! Even on a personal scale, this feature is great for projects like this blog.
+      <br>
+      <h3>Setup</h3>
+      If you are editing an existing NodeJS project, skip to the next paragraph. Even if you're not familiar with NodeJS
+      or NPM, this shouldn't be too hard. NodeJS is amazing out-of-the-box. I'm not going to explain how to setup NodeJS
+      and NPM, but you can learn how to do so <a class="no-underline"
+        href="https://www.npmjs.com/get-npm">(here)</a>.<br><br>
+      If you're starting from a brand new directory, initalize the folder as a typical NodeJS project via the command
+      line.
 
-    <div class=fakeMenu>
-  <div class="fakeButtons fakeClose"></div>
-  <div class="fakeButtons fakeMinimize"></div>
-  <div class="fakeButtons fakeZoom"></div>
-</div>
-<div class="fakeScreen">
-<xmp class="padding-top">
-# setup
-# init repo e.g. "documentation"
-mkdir documentation && cd documentation
+      <div class=fakeMenu>
+        <div class="fakeButtons fakeClose"></div>
+        <div class="fakeButtons fakeMinimize"></div>
+        <div class="fakeButtons fakeZoom"></div>
+      </div>
+      <div class="fakeScreen">
+        <xmp class="padding-top">
+          # setup
+          # init repo e.g. "documentation"
+          mkdir documentation && cd documentation
 
-# init npm and package.json
-npm init
+          # init npm and package.json
+          npm init
 
-# install dependencies
-npm install
+          # install dependencies
+          npm install
 
-# test init
-npm start
-  </xmp>
-</div>
-<br>
-If it starts up properly, you should be good to move on to the next section!
+          # test init
+          npm start
+        </xmp>
+      </div>
+      <br>
+      If it starts up properly, you should be good to move on to the next section!
 
- <h3>Spellchecker</h3>
- For the spellchecking functionality, I am using the npm package called <a class="no-underline"  href="https://www.npmjs.com/package/markdown-spellcheck">markdown-spellcheck</a>. This package is great because it can handle lots of errors, spellcheck from many files/directories, and it doesn't actually change any code, it just prints out its analysis to stdout. The end functionality will allow the command <xmp>npm run spellcheck</xmp> to spellcheck all of the html and markdown files and <xmp>npm run spellcheck-file [file]</xmp> to spellcheck [file] (given it is html or markdown).<br><br>
- First, we need to initialize the package by adding it as a dependency to <xmp>package.json</xmp>. This can all be done on the command line by the <i>magic</i> of npm.
+      <h3>Spellchecker</h3>
+      For the spellchecking functionality, I am using the npm package called <a class="no-underline"
+        href="https://www.npmjs.com/package/markdown-spellcheck">markdown-spellcheck</a>. This package is great because
+      it can handle lots of errors, spellcheck from many files/directories, and it doesn't actually change any code, it
+      just prints out its analysis to stdout. The end functionality will allow the command <xmp>npm run spellcheck</xmp>
+      to spellcheck all of the html and markdown files and <xmp>npm run spellcheck-file [file]</xmp> to spellcheck
+      [file] (given it is html or markdown).<br><br>
+      First, we need to initialize the package by adding it as a dependency to <xmp>package.json</xmp>. This can all be
+      done on the command line by the <i>magic</i> of npm.
 
- <div class=fakeMenu>
-<div class="fakeButtons fakeClose"></div>
-<div class="fakeButtons fakeMinimize"></div>
-<div class="fakeButtons fakeZoom"></div>
-</div>
-<div class="fakeScreen">
-<xmp class="padding-top">
-# install markdown-spellcheck npm package
-npm install markdown-spellcheck
+      <div class=fakeMenu>
+        <div class="fakeButtons fakeClose"></div>
+        <div class="fakeButtons fakeMinimize"></div>
+        <div class="fakeButtons fakeZoom"></div>
+      </div>
+      <div class="fakeScreen">
+        <xmp class="padding-top">
+          # install markdown-spellcheck npm package
+          npm install markdown-spellcheck
 
-# update package.json
-npm update
+          # update package.json
+          npm update
 
-# test markdown-spellcheck
-mdspell '**/*.html' -a --en-us -r
+          # test markdown-spellcheck
+          mdspell '**/*.html' -a --en-us -r
 
-# example output
-</xmp>
-<img src="assets/img/output.png"/>
-<xmp>
->> 16 spelling errors found in 1 file
-</xmp>
-</div><br><br>
-Note that <xmp>mdspell</xmp> won't return any mistakes if you don't have any files or mistakes in the your files!<br><br>
-Next, we need to edit the <xmp>package.json</xmp> directly to add the scripts <xmp>spellcheck</xmp> and <xmp>spellcheck-file</xmp>.
-<div class=fakeMenu>
-<div class="fakeButtons fakeClose"></div>
-<div class="fakeButtons fakeMinimize"></div>
-<div class="fakeButtons fakeZoom"></div>
-</div>
-<div class="fakeScreen">
-<xmp class="padding-top">
-# package.json
-{
-  ...
-  "scripts": {
-    ....
-    "spellcheck": "echo \"Spellchecking...\" && mdspell '**/*.html' '**/*.md'
-      '!**/node_modules/**/*' -a --en-us -r || :",
-    "spellcheck-file": "mdspell -a --en-us -r"
-  },
-  ....
-}
-</xmp>
-</div>
-<br>
-Notice how the <xmp>mdspell</xmp> command accepts directory formats with wildcards '*' and also can exclude certain folders and subfolders with exclamation points '!'.
-<br><br>
-<xmp>mdspell</xmp> command flag overview:
-<li><xmp>-a</xmp> = ignores acronyms</li>
-<li><xmp>--en-us</xmp>  = changes dictionary to American English (default is British English)</li>
-<li><xmp>-r</xmp> = generates a report on stdout</li>
-<li><xmp>|| :</xmp> = forces the script to return true (as long as there is an error, mdspell returns exit 1 and npm does not like that)</li>
-<br>
-If you want more information on the <xmp>mdspell</xmp> command or <xmp>markdown-spellcheck</xmp> npm package, go to the <a class="no-underline" href="https://www.npmjs.com/package/markdown-spellcheck">markdown-spellcheck</a> package documentation. <br><br>
-<h3>Testing Install</h3>
-Via command line:
-<div class=fakeMenu>
-<div class="fakeButtons fakeClose"></div>
-<div class="fakeButtons fakeMinimize"></div>
-<div class="fakeButtons fakeZoom"></div>
-</div>
-<div class="fakeScreen">
-<xmp class="padding-top">
-# make sure to update after editing package.json
-npm update
+          # example output
+        </xmp>
+        <img src="assets/img/output.png" />
+        <xmp>
+          >> 16 spelling errors found in 1 file
+        </xmp>
+      </div><br><br>
+      Note that <xmp>mdspell</xmp> won't return any mistakes if you don't have any files or mistakes in the your
+      files!<br><br>
+      Next, we need to edit the <xmp>package.json</xmp> directly to add the scripts <xmp>spellcheck</xmp> and <xmp>
+        spellcheck-file</xmp>.
+      <div class=fakeMenu>
+        <div class="fakeButtons fakeClose"></div>
+        <div class="fakeButtons fakeMinimize"></div>
+        <div class="fakeButtons fakeZoom"></div>
+      </div>
+      <div class="fakeScreen">
+        <xmp class="padding-top">
+          # package.json
+          {
+          ...
+          "scripts": {
+          ....
+          "spellcheck": "echo \"Spellchecking...\" && mdspell '**/*.html' '**/*.md'
+          '!**/node_modules/**/*' -a --en-us -r || :",
+          "spellcheck-file": "mdspell -a --en-us -r"
+          },
+          ....
+          }
+        </xmp>
+      </div>
+      <br>
+      Notice how the <xmp>mdspell</xmp> command accepts directory formats with wildcards '*' and also can exclude
+      certain folders and subfolders with exclamation points '!'.
+      <br><br>
+      <xmp>mdspell</xmp> command flag overview:
+      <li>
+        <xmp>-a</xmp> = ignores acronyms
+      </li>
+      <li>
+        <xmp>--en-us</xmp> = changes dictionary to American English (default is British English)
+      </li>
+      <li>
+        <xmp>-r</xmp> = generates a report on stdout
+      </li>
+      <li>
+        <xmp>|| :</xmp> = forces the script to return true (as long as there is an error, mdspell returns exit 1 and npm
+        does not like that)
+      </li>
+      <br>
+      If you want more information on the <xmp>mdspell</xmp> command or <xmp>markdown-spellcheck</xmp> npm package, go
+      to the <a class="no-underline" href="https://www.npmjs.com/package/markdown-spellcheck">markdown-spellcheck</a>
+      package documentation. <br><br>
+      <h3>Testing Install</h3>
+      Via command line:
+      <div class=fakeMenu>
+        <div class="fakeButtons fakeClose"></div>
+        <div class="fakeButtons fakeMinimize"></div>
+        <div class="fakeButtons fakeZoom"></div>
+      </div>
+      <div class="fakeScreen">
+        <xmp class="padding-top">
+          # make sure to update after editing package.json
+          npm update
 
-# spellcheck all .md and .html files (excluding ./node-modules)
-npm run spellcheck
-...
-# spellcheck [file]
-npm run spellcheck-file index.html
-...
-</xmp>
-</div>
-<br>
-Guess what? You're done! It was that easy.
-<br>
-<h3>Optional Step</h3>
-Is your spellcheck coming back with a bunch of false positive errors because of tech jargon? If you want to add any custom dictionary exceptions without too much overhead, you can implement the <xmp>.spelling</xmp> file which is automatically checked by the <xmp>mdspell</xmp> command. After first making the <xmp>.spelling</xmp> file in the project root, the syntax is pretty easy.
-<div class=fakeMenu>
-<div class="fakeButtons fakeClose"></div>
-<div class="fakeButtons fakeMinimize"></div>
-<div class="fakeButtons fakeZoom"></div>
-</div>
-<div class="fakeScreen">
-<xmp class="padding-top">
-# .spelling
+          # spellcheck all .md and .html files (excluding ./node-modules)
+          npm run spellcheck
+          ...
+          # spellcheck [file]
+          npm run spellcheck-file index.html
+          ...
+        </xmp>
+      </div>
+      <br>
+      Guess what? You're done! It was that easy.
+      <br>
+      <h3>Optional Step</h3>
+      Is your spellcheck coming back with a bunch of false positive errors because of tech jargon? If you want to add
+      any custom dictionary exceptions without too much overhead, you can implement the <xmp>.spelling</xmp> file which
+      is automatically checked by the <xmp>mdspell</xmp> command. After first making the <xmp>.spelling</xmp> file in
+      the project root, the syntax is pretty easy.
+      <div class=fakeMenu>
+        <div class="fakeButtons fakeClose"></div>
+        <div class="fakeButtons fakeMinimize"></div>
+        <div class="fakeButtons fakeZoom"></div>
+      </div>
+      <div class="fakeScreen">
+        <xmp class="padding-top">
+          # .spelling
 
-# words you want to exclude
-perl
-multipart
-textarea
-stringify
-# supports cAsE SeNsItIvItY
-nodeJS
-...
-</xmp>
-</div>
-<br><br>
-<h3>Conclusion</h3>
-<xmp>tl;dr:</xmp> NodeJS is awesome!
-<br><br>
-Finding the right package for your needs is about the hardest part once you get the hang of it. This added a useful feature in a modular way without way too much work! Reinventing the wheel for this problem could get HUGE and COMPLEX.
-<br><br>Some potential cons of this package that I found is that it becomes more complicated with CI tools like Travis or Jenkins because of all the log files generated. This can be fixed by also excluding those files from being checked, otherwise you risk <xmp>mdspell</xmp> freezing and timing out your build. Also the <a class="no-underline" href="http://wordlist.aspell.net/dicts/">dictionary</a> is subpar, especially with tech jargon and markdown files with code included.. however the package documentation includes a custom dictionary option. Just make sure to watch out for those things!<br><br>
-Although it is late in the month, I would also highly recommend getting involved in <a class="no-underline" href="https://hacktoberfest.digitalocean.com/">Hacktober</a>! Contributing to open source projects is always good! And you can get free swag from <a class="no-underline" href="https://hacktoberfest.digitalocean.com/#details">DigitalOcean</a> from only four pull requests.
+          # words you want to exclude
+          perl
+          multipart
+          textarea
+          stringify
+          # supports cAsE SeNsItIvItY
+          nodeJS
+          ...
+        </xmp>
+      </div>
+      <br><br>
+      <h3>Conclusion</h3>
+      <xmp>tl;dr:</xmp> NodeJS is awesome!
+      <br><br>
+      Finding the right package for your needs is about the hardest part once you get the hang of it. This added a
+      useful feature in a modular way without way too much work! Reinventing the wheel for this problem could get HUGE
+      and COMPLEX.
+      <br><br>Some potential cons of this package that I found is that it becomes more complicated with CI tools like
+      Travis or Jenkins because of all the log files generated. This can be fixed by also excluding those files from
+      being checked, otherwise you risk <xmp>mdspell</xmp> freezing and timing out your build. Also the <a
+        class="no-underline" href="http://wordlist.aspell.net/dicts/">dictionary</a> is subpar, especially with tech
+      jargon and markdown files with code included.. however the package documentation includes a custom dictionary
+      option. Just make sure to watch out for those things!<br><br>
+      Although it is late in the month, I would also highly recommend getting involved in <a class="no-underline"
+        href="https://hacktoberfest.digitalocean.com/">Hacktober</a>! Contributing to open source projects is always
+      good! And you can get free swag from <a class="no-underline"
+        href="https://hacktoberfest.digitalocean.com/#details">DigitalOcean</a> from only four pull requests.
     </main>
     <nav class="blog-nav">
 
       <!-- added stuff here -->
       <div class="b-nav">
         <li><a class="b-link" href="https://hannahapuan.github.io/blog/" target="_blank">Blog - std.out</a></li>
-  <li><a class="b-link" href="https://hannahapuan.github.io/" target="_blank">Homepage</a></li>
-  <li><a class="b-link" href="https://github.com/hannahapuan" target="_blank">Github - hannahapuan</a></li>
-  <li><a class="b-link" href="https://hannahapuan.github.io/resume.pdf" target="_blank">Resume</a></li>
-  <li><a class="b-link" href="https://linkedin.com/in/hannahapuan" target="_blank">LinkedIn</a></li>
-</div>
+        <li><a class="b-link" href="https://hannahapuan.github.io/" target="_blank">Homepage</a></li>
+        <li><a class="b-link" href="https://github.com/hannahapuan" target="_blank">Github - hannahapuan</a></li>
+        <li><a class="b-link" href="https://hannahapuan.github.io/resume.pdf" target="_blank">Resume</a></li>
+        <li><a class="b-link" href="https://linkedin.com/in/hannahapuan" target="_blank">LinkedIn</a></li>
+      </div>
 
       <!-- Burger-Icon -->
-<div class="b-container">
-  <div class="b-menu">
-    <div class="b-bun b-bun--top"></div>
-    <div class="b-bun b-bun--mid"></div>
-    <div class="b-bun b-bun--bottom"></div>
-  </div>
+      <div class="b-container">
+        <div class="b-menu">
+          <div class="b-bun b-bun--top"></div>
+          <div class="b-bun b-bun--mid"></div>
+          <div class="b-bun b-bun--bottom"></div>
+        </div>
 
-  <!-- Burger-Brand -->
-  <a href="#" class="b-brand"></a>
-</div>
+        <!-- Burger-Brand -->
+        <a href="#" class="b-brand"></a>
+      </div>
 
     </nav>
     <aside class="blog-ads"></aside>
   </div>
-  <footer>© 2017 Hannah Apuan</footer>
+  <footer>© 2019 Hannah Apuan</footer>
 </body>
 <script src="assets/js/index.js"></script>
 <script>
-function goBack() {
+  function goBack() {
     window.history.back();
-}
+  }
 </script>
+
 </html>
 
 <!-- https://codepen.io/joshcummingsdesign/pen/qOKaWd?q=terminal&limit=all&type=type-pens -->
