@@ -212,7 +212,7 @@ dt {
   background-image: url("bkg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: auto auto;
+  background-size: 70% auto;
 }
 
 h1 {
