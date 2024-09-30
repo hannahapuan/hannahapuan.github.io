@@ -10,6 +10,10 @@ a {
   text-decoration: none;
 }
 
+b {
+  font-weight: 450 !important;
+}
+
 dt {
   line-height: 30px;
 }
@@ -216,6 +220,10 @@ h1 {
   font-weight: 100;
 }
 
+.zeroth {
+  color: #3C39DB;
+}
+
 .first {
   color: #6e60db;
 }
@@ -267,4 +275,10 @@ a:hover {
   margin-top: 30px;
   width: 60%;
   border-radius: 50px;
+}
+
+.bottom{
+  position: relative;
+  width: 5%;
+  width: 5%;
 }
