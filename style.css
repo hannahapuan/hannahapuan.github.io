@@ -278,7 +278,6 @@ a:hover {
 }
 
 .bottom{
-  position: relative;
-  width: 5%;
-  width: 5%;
+  width: 20px;
+  height: 20px;
 }
