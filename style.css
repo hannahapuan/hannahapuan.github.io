@@ -18,17 +18,29 @@ dt {
   line-height: 30px;
 }
 
+.low-reso-warning {
+  display: none;
+  font-size: 10px;
+  text-align: center !important;
+}
+
 /* 
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .low-reso-warning {
+    display: inline !important;
+  }
+
   .panel-container > .main-panel {
-    width: 0% !important;
+    width: 100%;
+    padding: 10%;
   }
 
   .panel-container > .side-panel {
+    display: none;
     text-align: center !important;
     width: 100% !important;
     background-size: auto !important;
@@ -50,11 +62,17 @@ dt {
   */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .low-reso-warning {
+    display: inline !important;
+  }
+
   .panel-container > .main-panel {
-    width: 0% !important;
+    width: 100%;
+    padding: 10%;
   }
 
   .panel-container > .side-panel {
+    display: none;
     text-align: center !important;
     width: 100% !important;
     background-size: 100% auto !important;
@@ -76,14 +94,17 @@ dt {
   */
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .low-reso-warning {
+    display: inline !important;
+  }
+
   .panel-container > .main-panel {
-    width: 0% !important;
+    width: 100%;
+    padding: 10%;
   }
 
   .panel-container > .side-panel {
-    text-align: center !important;
-    width: 100% !important;
-    background-size: 100% auto !important;
+    display: none;
   }
 
   span {
@@ -102,14 +123,16 @@ dt {
   */
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .low-reso-warning {
+    display: inline !important;
+  }
+
   .panel-container > .main-panel {
-    width: 0% !important;
+    width: 70%;
   }
 
   .panel-container > .side-panel {
-    text-align: center !important;
-    width: 100% !important;
-    background-size: 100% auto !important;
+    display: none;
   }
 
   span {
@@ -136,7 +159,7 @@ dt {
   }
 
   .main-panel > .panel-content {
-    width: 100%;
+    width: 70%;
   }
 
   .panel-container > .side-panel {
