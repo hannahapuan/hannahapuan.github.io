@@ -273,8 +273,10 @@ h2 {
   font-weight: 400;
 }
 
-.peach {
-  color: rgba(252, 182, 159, 1);
+mark.peach {
+  font-weight: bold;
+  color: #d87180;
+  background-color: #FFFFFF;
 }
 
 span {
