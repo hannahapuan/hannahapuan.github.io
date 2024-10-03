@@ -22,6 +22,7 @@ dt {
 	display: none;
 	font-size: 10px;
 	text-align: center !important;
+  background-size: 10px 10px;
 }
 
 /* 
@@ -36,8 +37,10 @@ dt {
 
 	.panel-container>.main-panel {
 		width: 100%;
-		padding: 10%;
+		padding-left: 10%;
+    padding-right: 10%;
 	}
+
 
 	.panel-container>.side-panel {
 		display: none;
@@ -68,7 +71,8 @@ dt {
 
 	.panel-container>.main-panel {
 		width: 100%;
-		padding: 10%;
+		padding-left: 10%;
+    padding-right: 10%;
 	}
 
 	.panel-container>.side-panel {
@@ -100,7 +104,9 @@ dt {
 
 	.panel-container>.main-panel {
 		width: 100%;
-		padding: 10%;
+		padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0%;
 	}
 
 	.panel-container>.side-panel {
@@ -128,8 +134,11 @@ dt {
 	}
 
 	.panel-container>.main-panel {
-		width: 70%;
+		width: 100%;
+		padding-left: 10%;
+    padding-right: 10%;
 	}
+
 
 	.panel-container>.side-panel {
 		display: none;
@@ -305,4 +314,82 @@ a:hover {
 .bottom {
 	width: 20px;
 	height: 20px;
+}
+
+
+/* New stuff*/
+
+body {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 5vh;
+  background: #111;
+}
+
+.bg_move {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          background: repeating-radial-gradient(circle at 100% 100%, rgba(255, 190, 11, 0.5) 4%, rgba(255, 190, 11, 0.5) 8%, rgba(251, 86, 7, 0.5) 8%, rgba(251, 86, 7, 0.5) 12%, rgba(255, 0, 110, 0.5) 12%, rgba(255, 0, 110, 0.5) 16%, rgba(131, 56, 236, 0.5) 16%, rgba(131, 56, 236, 0.8) 20%, rgba(58, 134, 255, 0.5) 20%, rgba(58, 134, 255, 0.5) 24%), 
+                      repeating-radial-gradient(circle at 0% 100%, rgba(255, 190, 11, 0.7) 4%, rgba(255, 190, 11, 0.9) 8%, rgba(251, 86, 7, 0.7) 8%, rgba(251, 86, 7, 0.9) 12%, rgba(255, 0, 110, 0.7) 12%, rgba(255, 0, 110, 0.9) 16%, rgba(131, 56, 236, 0.8) 16%, rgba(131, 56, 236, 0.8) 20%, rgba(58, 134, 255, 0.8) 20%, rgba(58, 134, 255, 0.8) 24%);
+  background-position: 0 0;
+  -webkit-animation: stripes 10s linear infinite;
+          animation: stripes 10s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.bg_move h5 {
+  font-size: 8rem;
+	font-family: "Work Sans", sans-serif;
+  padding: 0px;
+  line-height: 8rem;
+  font-kerning: 5em;
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@-webkit-keyframes stripes {
+  100% {
+    background-position: 250px 0, 250px 0, 100px 0;
+  }
+}
+
+@keyframes stripes {
+  100% {
+    background-position: 250px 0, 250px 0, 100px 0;
+  }
+}
+
+.fa-solid .fa-angle-down{
+ line-height: 0em;
 }
