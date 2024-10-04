@@ -32,7 +32,12 @@ dt {
 @media (min-width: 768px) and (max-width: 1024px) {
   .fab, .fas {
     font-family: "Font Awesome 5 Free";
-    color: #3C39DB;
+    /* color: #3C39DB; */
+    background-image: url('bkg.jpg');
+    background-size: 3em 2em;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 	.low-reso-warning {
@@ -73,7 +78,12 @@ dt {
 
   .fab, .fas {
     font-family: "Font Awesome 5 Free";
-    color: #3C39DB;
+    /* color: #3C39DB; */
+    background-image: url('bkg.jpg');
+    background-size: 3em 2em;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 	.panel-container>.main-panel {
@@ -106,7 +116,12 @@ dt {
 @media (min-width: 481px) and (max-width: 767px) {
   .fab, .fas {
     font-family: "Font Awesome 5 Free";
-    color: #3C39DB;
+    /* color: #3C39DB; */
+    background-image: url('bkg.jpg');
+    background-size: 3em 2em;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 	.low-reso-warning {
@@ -140,7 +155,12 @@ dt {
 @media (min-width: 320px) and (max-width: 480px) {
   .fab, .fas {
     font-family: "Font Awesome 5 Free";
-    color: #3C39DB;
+    /* color: #3C39DB; */
+    background-image: url('bkg.jpg');
+    background-size: 3em 2em;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 	.low-reso-warning {
@@ -283,20 +303,18 @@ h1 {
 	color: #e69b72;
 }
 
-.panel-content>a:hover,
-a:active {
-	color: #fff;
-	background-color: #fff;
-}
-
 h2 {
 	font-weight: 400;
 }
 
-mark.peach {
+.gradient {
 	font-weight: bold;
-	color: #d87180;
-	background-color: #FFFFFF;
+  background-image: url('bkg.jpg');
+  background-size: 10em 2em;
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  background-color: #fff;
 }
 
 span {
@@ -313,7 +331,7 @@ span>a:visited {
 
 span>a:active,
 a:hover {
-	color: #fff;
+	color: #b359ca;
 }
 
 .line {
@@ -325,4 +343,10 @@ a:hover {
 .bottom {
 	width: 20px;
 	height: 20px;
+}
+
+.panel-content>a:hover,
+a:active {
+       color: #fff;
+       background-color: #5041d8;
 }
