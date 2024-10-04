@@ -32,7 +32,7 @@ dt {
 @media (min-width: 768px) and (max-width: 1024px) {
     .fab, .fas {
         font-family: "Font Awesome 5 Free";
-        background-image: url('bkg.jpg');
+        background-image: url('assets/bkg.jpg');
         background-size: 3em 2em;
         background-clip:text;
         -webkit-background-clip:text;
@@ -73,7 +73,7 @@ dt {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .fab, .fas {
     font-family: "Font Awesome 5 Free";
-    background-image: url('bkg.jpg');
+    background-image: url('assets/bkg.jpg');
     background-size: 3em 2em;
     background-clip:text;
     -webkit-background-clip:text;
@@ -114,7 +114,7 @@ dt {
 @media (min-width: 481px) and (max-width: 767px) {
   .fab, .fas {
     font-family: "Font Awesome 5 Free";
-    background-image: url('bkg.jpg');
+    background-image: url('assets/bkg.jpg');
     background-size: 3em 2em;
     background-clip:text;
     -webkit-background-clip:text;
@@ -152,7 +152,7 @@ dt {
 @media (min-width: 320px) and (max-width: 480px) {
   .fab, .fas {
     font-family: "Font Awesome 5 Free";
-    background-image: url('bkg.jpg');
+    background-image: url('assets/bkg.jpg');
     background-size: 3em 2em;
     background-clip:text;
     -webkit-background-clip:text;
@@ -268,7 +268,7 @@ dt {
 	padding-top: 220px;
 	text-align: center;
 	background: #7666dc;
-	background-image: url("bkg.jpg");
+	background-image: url("assets/bkg.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 70% auto;
@@ -339,6 +339,6 @@ a:hover {
 }
 
 .footer {
-	width: 1em;
-	height: 1em;
+	width: 1.5em;
+	height: 1.5em;
 }
