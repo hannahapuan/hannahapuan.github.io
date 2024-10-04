@@ -18,9 +18,9 @@ dt {
 	line-height: 30px;
 }
 
-.low-reso-warning {
+.low-reso {
 	display: none;
-	font-size: 10px;
+	font-size: 5em;
 	text-align: center !important;
 }
 
@@ -30,7 +30,16 @@ dt {
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-	.low-reso-warning {
+    .fab, .fas {
+        font-family: "Font Awesome 5 Free";
+        background-image: url('bkg.jpg');
+        background-size: 3em 2em;
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+    }
+
+	.low-reso {
 		display: inline !important;
 	}
 
@@ -62,7 +71,16 @@ dt {
   */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-	.low-reso-warning {
+  .fab, .fas {
+    font-family: "Font Awesome 5 Free";
+    background-image: url('bkg.jpg');
+    background-size: 3em 2em;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+	.low-reso {
 		display: inline !important;
 	}
 
@@ -94,7 +112,16 @@ dt {
   */
 
 @media (min-width: 481px) and (max-width: 767px) {
-	.low-reso-warning {
+  .fab, .fas {
+    font-family: "Font Awesome 5 Free";
+    background-image: url('bkg.jpg');
+    background-size: 3em 2em;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+	.low-reso {
 		display: inline !important;
 	}
 
@@ -123,7 +150,16 @@ dt {
   */
 
 @media (min-width: 320px) and (max-width: 480px) {
-	.low-reso-warning {
+  .fab, .fas {
+    font-family: "Font Awesome 5 Free";
+    background-image: url('bkg.jpg');
+    background-size: 3em 2em;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+	.low-reso {
 		display: inline !important;
 	}
 
@@ -302,7 +338,7 @@ a:hover {
 	border-radius: 50px;
 }
 
-.bottom {
-	width: 20px;
-	height: 20px;
+.footer {
+	width: 1em;
+	height: 1em;
 }
