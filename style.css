@@ -30,7 +30,7 @@ dt {
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .fab, .fas {
+    .fab, .fas, .fa-brands {
         font-family: "Font Awesome 5 Free";
         background-image: url('assets/bkg.jpg');
         background-size: 3em 2em;
@@ -68,10 +68,10 @@ dt {
 /* 
     ##Device = Tablets, Ipads (landscape)
     ##Screen = B/w 768px to 1024px
-  */
+ */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .fab, .fas {
+  .fab, .fas, .fa-brands {
     font-family: "Font Awesome 5 Free";
     background-image: url('assets/bkg.jpg');
     background-size: 3em 2em;
@@ -112,7 +112,7 @@ dt {
   */
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .fab, .fas {
+	.fab, .fas, .fa-brands {
     font-family: "Font Awesome 5 Free";
     background-image: url('assets/bkg.jpg');
     background-size: 3em 2em;
@@ -150,7 +150,7 @@ dt {
   */
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .fab, .fas {
+	.fab, .fas, .fa-brands {
     font-family: "Font Awesome 5 Free";
     background-image: url('assets/bkg.jpg');
     background-size: 3em 2em;
