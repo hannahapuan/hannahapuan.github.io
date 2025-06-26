@@ -280,7 +280,7 @@ h1 {
 }
 
 .zeroth {
-	color: #3C39DB;
+	color: #494f5a;
 }
 
 .first {
@@ -312,6 +312,18 @@ h2 {
 mark.peach {
 	font-weight: bold;
 	color: #d87180;
+	background-color: #FFFFFF;
+}
+
+mark.orange {
+	font-weight: bold;
+	color: #e69b72;
+	background-color: #FFFFFF;
+}
+
+mark.blue {
+	font-weight: bold;
+	color: #5041d8;
 	background-color: #FFFFFF;
 }
 
